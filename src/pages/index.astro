@@ -1,4 +1,10 @@
 ---
+const title = 'Welcome to Astro Lab 1';
+const color = 'danger';
+
+const hobbies = ['programar', ' leer', ' escribir', ' estudiar', 'descansar', 'aprender', 'manejar'];
+
+const isActive = false;
 ---
 
 <html lang="en">
@@ -10,6 +16,35 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1 class={color}>{title}</h1>
+		<!-- <h2 class="warning">{hobbies[0]}</h2> -->
+		<ul>
+			{hobbies.map((hobby) => <li>
+				<h3>{hobby}</h3><button>Like</button></li>)}
+		</ul>
+
+		<!-- <h3 class="warning">{isActive ? "user is active" : "user is disabled"}</h3> -->
+		<h3 class="warning">{isActive?"user is active" : ""}</h3> <!-- {isActive && "user is active"} tambien puedo decirle {!isActive && "user is disabled"}-->
 	</body>
 </html>
+
+<script>
+	console.log("hi coders");
+</script>
+
+<style>
+
+	body {
+		background: #202020 ;
+		color: white;
+	}
+	.title {
+		color:skyblue;
+	}
+	.danger {
+		color: red;
+	}
+	.warning {
+		color: yellow;
+	}
+</style>

@@ -1,0 +1,30 @@
+---
+interface Props {
+    pageTitle?: string
+    pageDescription?: string
+}
+const {pageTitle, pageDescription} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDescription}>
+    <title>AstroLab1 | {pageTitle}</title>
+  </head>
+  <body>
+    
+    <slot />
+
+    <style>
+      body {
+        background: #202020;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+---
+import Layout from "../../components/Layout.astro";
+
+const posts = await Astro.glob('./post/*.md')
+console.log(posts)
+---
+
+<Layout pageTitle="Blog de Desarrollo" pageDescription="Tutorial de desarrollo y programación">
+    <h1>Astro_Blog</h1>
+
+    <a href="/blog/firstPost">Mi primer post </a>
+    <br>
+    <a href="/blog/tutorialAstro">Tutorial Astro</a>
+
+</Layout>

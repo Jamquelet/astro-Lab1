@@ -1,0 +1,24 @@
+---
+//aqui puedo traer algo importar
+import Card from "../components/card.astro";
+import Layout from "../components/Layout.astro";
+---
+
+<Layout pageTitle="Servicios">
+  <h1>Mis servicios</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+    reprehenderit nesciunt aperiam dolore, expedita exercitationem
+    necessitatibus quas nihil saepe fugit!
+  </p>
+
+  <Card title="hello world" content="Prueba" />
+  <Card
+    title="Programación"
+    content="Servicios de desarrollo de aplicaciones"
+  />
+  <Card title="Diseño" content="Diseño de interfaces web" />
+  <Card title="Asistencia" content="Asistencia profesional" />
+
+  <Card />
+</Layout>
